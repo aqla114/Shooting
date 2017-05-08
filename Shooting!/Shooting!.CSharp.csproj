@@ -69,6 +69,15 @@
     <Compile Include="Assets\Assets\SAColliderBuilder\Scripts\SAMeshCollider.cs" />
     <Compile Include="Assets\Assets\SAColliderBuilder\Scripts\SAMeshColliderBuilder.cs" />
     <Compile Include="Assets\Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\Scripts\SetFovGlobalShaderVariable.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\Scripts\Utils\ExposePropertyAttribute.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\Scripts\Utils\TransformExtensionMethods.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\Scripts\VolumetricMultiLineBehavior.cs" />
     <Compile Include="Assets\Assets\omega_fighter_01\script\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
@@ -76,12 +85,19 @@
     <Compile Include="Assets\Scripts\EnemyGenerator.cs" />
     <Compile Include="Assets\Scripts\ExplosionSoundPlayer.cs" />
     <Compile Include="Assets\Scripts\GameMgr.cs" />
+    <Compile Include="Assets\Scripts\Laser.cs" />
     <Compile Include="Assets\Scripts\ShooterControler.cs" />
     <Compile Include="Assets\Scripts\TitleController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Assets\SAColliderBuilder\Readme_en.txt" />
     <None Include="Assets\Assets\SAColliderBuilder\Readme_jp.txt" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineShaderAdditive.shader" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineShaderAdditiveFast.shader" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineShaderAlphaBlended.shader" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineShaderAlphaBlendedFast.shader" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineStripShaderAdditive.shader" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineStripShaderAlphaBlended.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

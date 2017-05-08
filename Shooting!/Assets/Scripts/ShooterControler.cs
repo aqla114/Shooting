@@ -18,17 +18,20 @@ public class ShooterControler : MonoBehaviour
     public float MaxRotation = 20.0f;  //最大回転角
 
     public GameObject[] PlayerBullets;  //弾のprefab
-    public float ShootIntervalTime = 0.1f; //弾発射のインターバル
+    public float[] ShootIntervalTimes; //弾発射のインターバル
 
     AudioSource shootSound;  //発射音
     float interval;  //Interval
-    int state = 1;  //Shooterのモード
+    int state = 2;  //Shooterのモード
 
 
 	void Start ()
     {
         //AudioSourceの取得
         shootSound = GetComponent<AudioSource>();
+
+        //ゲーム開始直後から弾を撃てるようにintervalを与えておく
+        interval = 10.0f;
 
 	}
 	
@@ -84,12 +87,21 @@ public class ShooterControler : MonoBehaviour
         interval += Time.deltaTime;
         if (Input.GetKey("space"))
         {
-            if(interval > ShootIntervalTime)
+            if(interval > ShootIntervalTimes[state])
             { 
                 interval = 0.0f;
                 Shoot(state);
             }
         }
+
+        
+        //弾の変更
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            state = (state + 1) % 3;
+        }
+
+        //Debug.Log(state);
     }
 
     //弾もしくはEnemyに当たって爆発する
@@ -126,6 +138,9 @@ public class ShooterControler : MonoBehaviour
                 break;
             case 1:  //雑魚弾（水色）
                 Instantiate(PlayerBullets[1], transform.position, Quaternion.Euler(90, 0, 0));
+                break;
+            case 2:  //レーザー
+                Instantiate(PlayerBullets[2], transform.position, Quaternion.identity);
                 break;
             default:
                 break;

@@ -71,7 +71,7 @@ public class EnemyControler : MonoBehaviour {
         if (collider.gameObject.tag == "PlayerBullet" || collider.gameObject.tag == "Shooter")
         {
             //爆発エフェクト発生
-            Instantiate(Explosion, transform.position, Quaternion.identity);
+            GameObject explosion = (GameObject)Instantiate(Explosion, transform.position, Quaternion.identity);
 
             //爆発音再生Objectを生成
             Instantiate(ExplosionSoundPlayer, transform.position, Quaternion.identity);

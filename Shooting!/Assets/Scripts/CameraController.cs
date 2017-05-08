@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraController : MonoBehaviour {
+public class CameraController : MonoBehaviour
+{
 
-    Vector3 diff;
+    Vector3 diff;  //最初のカメラとShooterの位置関係
 
-    public GameObject target;
-    public float followspeed;
+    public GameObject target;  //Shooterを登録
+    public float followspeed;  //カメラが追うスピード
 
 	void Start ()
     {

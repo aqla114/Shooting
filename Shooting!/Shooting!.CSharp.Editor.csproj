@@ -102,10 +102,19 @@
     <Compile Include="Assets\Assets\SAColliderBuilder\Editor\SAMeshColliderBuilderInspector.cs" />
     <Compile Include="Assets\Assets\SAColliderBuilder\Editor\SAMeshColliderEditorCommon.cs" />
     <Compile Include="Assets\Assets\SAColliderBuilder\Editor\SAMeshColliderInspector.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\Scripts\Editor\ExposeProperties.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\Scripts\Editor\VolumetricLineBehaviorEditor.cs" />
+    <Compile Include="Assets\Assets\VolumetricLines\Scripts\Editor\VolumetricLineStripBehaviorEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Assets\SAColliderBuilder\Readme_en.txt" />
     <None Include="Assets\Assets\SAColliderBuilder\Readme_jp.txt" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineShaderAdditive.shader" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineShaderAdditiveFast.shader" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineShaderAlphaBlended.shader" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineShaderAlphaBlendedFast.shader" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineStripShaderAdditive.shader" />
+    <None Include="Assets\Assets\VolumetricLines\Shaders\VolumetricLineStripShaderAlphaBlended.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
