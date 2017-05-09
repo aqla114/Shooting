@@ -22,13 +22,16 @@ public class ShooterControler : MonoBehaviour
 
     AudioSource shootSound;  //発射音
     float interval;  //Interval
-    int state = 2;  //Shooterのモード
+    int state;  //Shooterの弾モード
 
 
 	void Start ()
     {
         //AudioSourceの取得
         shootSound = GetComponent<AudioSource>();
+
+        //Shooterを初期状態に
+        state = 1;
 
         //ゲーム開始直後から弾を撃てるようにintervalを与えておく
         interval = 10.0f;
